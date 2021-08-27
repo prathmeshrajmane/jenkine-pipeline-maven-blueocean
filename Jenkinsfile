@@ -1,12 +1,12 @@
 pipeline {
   agent {
-    label 'master'
+    label 'slave01'
   }
   stages {
     stage('Docker node test') {
       agent {
         docker {
-          label 'master'
+          label 'slave01'
           image 'node:7-alpine'
           args '--name docker-node'
         }
@@ -20,7 +20,7 @@ pipeline {
     stage('Docker maven test') {
       agent {
         docker {
-          label 'master'
+          label 'slave01'
           image 'maven:3-alpine'
         }
 
