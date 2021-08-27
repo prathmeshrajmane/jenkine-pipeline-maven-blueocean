@@ -13,11 +13,7 @@ pipeline {
 
       }
       steps {
-        sh '''node --version
-cd /home/prathmesh/projects/jenkins/jenkine-pipeline-maven-blueocean/jenkine-pipeline-maven-demo
-mkdir new
-
-'''
+        sh 'node --version'
       }
     }
 
